@@ -23,7 +23,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>Norwegian legal citation style based on "Veiledning for henvisninger i juridiske tekster" (February 2019).</summary>
-    <updated>2026-11-19T21:34:48+00:00</updated>
+    <updated>2026-11-19T21:42:55+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="nb">
@@ -222,7 +222,7 @@
         </date>
       </else-if>
       <else>
-        <text term="no date" prefix="(" suffix=")"/>
+        <text term="no date" form="short" prefix="(" suffix=")"/>
       </else>
     </choose>
   </macro>
@@ -268,7 +268,7 @@
         </date>
       </if>
       <else>
-        <text term="no date"/>
+        <text term="no date" form="short"/>
       </else>
     </choose>
   </macro>
