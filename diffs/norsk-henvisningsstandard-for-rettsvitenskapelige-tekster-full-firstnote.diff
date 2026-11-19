@@ -22,7 +22,7 @@
      <updated>2026-11-19T14:25:10+00:00</updated>
      <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
    </info>
-@@ -670,10 +670,72 @@
+@@ -727,12 +727,81 @@
      <layout delimiter="; ">
        <group delimiter=" ">
          <choose>
@@ -95,16 +95,26 @@
 +              </else>
 +            </choose>
 +          </else-if>
+           <else-if type="broadcast">
+-            <text macro="broadcast-short"/>
++            <choose>
++              <if position="first">
++                <text macro="broadcast-bib"/>
++              </if>
++              <else>
++                <text macro="broadcast-short"/>
++              </else>
++            </choose>
+           </else-if>
            <!-- EU acts: Statute with Pages, see the macro "eu-legislation" -->
            <else-if type="legislation" variable="page" match="all">
-             <choose>
-@@ -758,7 +820,19 @@
+@@ -818,7 +887,19 @@
              <text variable="title"/>
            </else>
          </choose>
 -        <text macro="locator"/>
 +        <choose>
-+          <if type="book thesis chapter entry-encyclopedia paper-conference article-journal article-newspaper article-magazine post-weblog" match="any">
++          <if type="book thesis chapter entry-encyclopedia paper-conference article-journal article-newspaper article-magazine post-weblog broadcast" match="any">
 +            <choose>
 +              <!-- In a first note, the full reference places the locator itself (macro "locator-first-note") -->
 +              <if position="first" match="none">
