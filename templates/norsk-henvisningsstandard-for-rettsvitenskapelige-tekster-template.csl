@@ -113,6 +113,17 @@
       </else-if>
     </choose>
   </macro>
+  <!-- Works without an author or editor sort by title among the authors, not last -->
+  <macro name="author-sorting">
+    <choose>
+      <if variable="author editor" match="any">
+        <text macro="author-full"/>
+      </if>
+      <else>
+        <text variable="title"/>
+      </else>
+    </choose>
+  </macro>
   <macro name="author-short">
     <names variable="author">
       <name form="short" delimiter-precedes-last="never" and="text"/>
@@ -827,7 +838,7 @@
       <key macro="type-sorting"/>
       <key macro="legal_case-authority"/>
       <key macro="date-sorting"/>
-      <key macro="author-full"/>
+      <key macro="author-sorting"/>
       <key variable="issued"/>
       <key variable="title"/>
     </sort>

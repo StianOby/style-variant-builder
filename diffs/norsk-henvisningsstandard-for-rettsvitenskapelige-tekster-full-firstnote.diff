@@ -22,7 +22,7 @@
      <updated>2026-11-19T14:25:10+00:00</updated>
      <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
    </info>
-@@ -727,12 +727,81 @@
+@@ -738,12 +738,81 @@
      <layout delimiter="; ">
        <group delimiter=" ">
          <choose>
@@ -108,7 +108,7 @@
            </else-if>
            <!-- EU acts: Statute with Pages, see the macro "eu-legislation" -->
            <else-if type="legislation" variable="page" match="all">
-@@ -818,7 +887,19 @@
+@@ -829,7 +898,19 @@
              <text variable="title"/>
            </else>
          </choose>
